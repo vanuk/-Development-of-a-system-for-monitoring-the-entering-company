@@ -26,14 +26,61 @@
         <input type="text" id ="S"><br><br>
 
         <label>Resultat</label> 
-        <input type id ="R" ><br><br>
+        <input type="label" type id ="R" ><br><br>
 
         <input type="button" value="=" onclick= "checkForm()"><br><br>
+
         
 <details>
 
     <summary>Перелік усіх предметів</summary>
 
+    <input type="button" value="Середня освіта" onclick= "cheakKoef(0.35,0.35,0.2)" ><br><br>
+    <input type="button" value="Професійна освіта (цифрові технології)" onclick= "cheakKoef(0.35,0.35,0.2)" ><br><br>
+    <input type="button" value="Фізична культура і спорт" onclick= "cheakKoef(0.3,0.35,0.25)" ><br><br>
+    <input type="button" value="Інформаційна, бібліотечна та архівна справа" onclick= "cheakKoef(0.4,0.25,0.25)" ><br><br>
+    <input type="button" value="Культурологія" onclick= "cheakKoef(0.4,0.3,0.2)" ><br><br>
+    <input type="button" value="Економіка" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Психологія" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Журналістика" onclick= "cheakKoef(0.4,0.3,0.2)" ><br><br>
+    <input type="button" value="Облік і оподаткування" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Фінанси, банківська справа та страхування" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Менеджмент" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Маркетинг" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Підприємництво, торгівля та біржова діяльність" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Право" onclick= "cheakKoef(0.4,0.3,0.2)" ><br><br>
+    <input type="button" value="Екологія" onclick= "cheakKoef(0.35,0.3,0.25)" ><br><br>
+    <input type="button" value="Науки про Землю" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Географія" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Прикладна математика" onclick= "cheakKoef(0.25,0.4,0.25)" ><br><br>
+    <input type="button" value="Інженерія програмного забезпечення" onclick= "cheakKoef(0.25,0.35,0.3)" ><br><br>
+    <input type="button" value="Комп`терні науки" onclick= "cheakKoef(0.25,0.35,0.3)" ><br><br>
+    <input type="button" value="Комп`ютерна інженерія" onclick= "cheakKoef(0.3,0.35,0.25)" ><br><br>
+    <input type="button" value="Інформаційні системи та технології" onclick= "cheakKoef(0.35,0.35,0.2)" ><br><br>
+    <input type="button" value="Галузеве машинобудування" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Електроенергетика, електротехніка та електромеханіка" onclick= "cheakKoef(0.25,0.35,0.3)" ><br><br>
+    <input type="button" value="Теплоенергетика" onclick= "cheakKoef(0.35,0.2,0.35)" ><br><br>
+    <input type="button" value="Гідроенергетика" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Автоматизація та комп'ютерно-інтегровані технології" onclick= "cheakKoef(0.35,0.2,0.35)" ><br><br>
+    <input type="button" value="Біотехнології та біоінженерія" onclick= "cheakKoef(0.25,0.45,0.2)" ><br><br>
+    <input type="button" value="Технології захисту навколишнього середовища" onclick= "cheakKoef(0.35,0.3,0.25)" ><br><br>
+    <input type="button" value="Гірництво" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Архітектура та містобудування" onclick= "cheakKoef(0.2,0.2,0.6)" ><br><br>
+    <input type="button" value="Будівництво та цивільна інженерія" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Геодезія та землеустрій" onclick= "cheakKoef(0.35,0.2,0.35)" ><br><br>
+    <input type="button" value="Гідротехнічне будівництво, водна інженерія та водні технології" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Агрономія" onclick= "cheakKoef(0.35,0.3,0.25)" ><br><br>
+    <input type="button" value="Водні біоресурси та аквакультура" onclick= "cheakKoef(0.25,0.4,0.25)" ><br><br>
+    <input type="button" value="Агроінженерія" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Фізична терапія, ерготерапія" onclick= "cheakKoef(0.3,0.35,0.25)" ><br><br>
+    <input type="button" value="Готельно-ресторанна справа" onclick= "cheakKoef(0.25,0.3,0.35)" ><br><br>
+    <input type="button" value="Туризм" onclick= "cheakKoef(0.25,0.3,0.35)" ><br><br>
+    <input type="button" value="Цивільна безпека" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Автомобільний транспорт" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Транспортні технології (на автомобільному транспорті)" onclick= "cheakKoef(0.3,0.3,0.3)" ><br><br>
+    <input type="button" value="Публічне управління та адміністрування" onclick= "cheakKoef(0.4,0.25,0.25)" ><br><br>
+    <input type="button" value="Міжнародні економічні відносини" onclick= "cheakKoef(0.35,0.3,0.25)" ><br><br>
+<!--
     <p>Середня освіта </p>
     <p>Професійна освіта (цифрові технології)</p>
     <p>Фізична культура і спорт </p>
@@ -62,6 +109,7 @@
     <p>Гідроенергетика </p>
     <p>Автоматизація та комп'ютерноінтегровані технології</p>
     <p>Біотехнології та біоінженерія</p>
+
     <p>Технології захисту навколишнього середовища </p>
     <p>Гірництво</p>
     <p>Архітектура та містобудування </p>
@@ -78,12 +126,12 @@
     <p>Транспортні технології (на автомобільному транспорті)</p>
     <p>Публічне управління та адміністрування</p>
     <p>Міжнародні економічні відносини</p>
-
-
-
+-->
 </details>
        
+        <input type="button" value="!!!!" onclick= "cheakKoef()"><br><br>
     
     <script src="test.js"></script>
+
 </body>
 </html>
