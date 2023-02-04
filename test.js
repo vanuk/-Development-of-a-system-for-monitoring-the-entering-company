@@ -9,8 +9,9 @@ function checkForm()
 {
    // (((parseFloat(s.value)-2)*10)+100)
 
- summa =((((parseInt(a.value)*parseFloat(k1.value))+(parseInt(b.value)*parseFloat(k2.value))+(parseInt(c.value)*parseFloat(k3.value))) 
-        /(parseFloat(k1.value)+parseFloat(k2.value)+parseFloat(k3.value) ))*1.04*1.02);
+ summa =( parseInt(a.value)*parseFloat(k1.value) + parseInt(b.value)*parseFloat(k2.value) + parseInt(c.value)*parseFloat(k3.value) + (((parseFloat(s.value)-2)*10)+100)*0.1 ) 
+        *1.04*1.02;
+
  document.getElementById("R").value=summa;
    
 }
