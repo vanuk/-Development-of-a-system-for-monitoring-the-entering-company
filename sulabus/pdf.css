@@ -1,62 +1,121 @@
 .title{
-    font-size: x-large;
-    margin: 0px 0px -1px;
-    font-style:calc(black);
-   
-    text-align: center;    
+  font-size: x-large;
+  margin: 0px 0px -1px;
+  font-style:unset;
+  word-wrap: break-word;
+  text-align: center;    
 }
 .block1{
-    font-size: x-large;
-    margin-left: 60%;
-    font-style: unset;
+  font-size: x-large;
+  margin-left: 50%;
+  font-style: unset;
+  word-wrap: break-word;
 }
 .tablefirst{
-   text-align: center;
-    font-size: 20px;
-    margin-left:8%;
-    
-   
+  text-align: center;
+  font-size: 20px;
+  margin-left:10%;
+  word-wrap: break-word;
+  
+ 
 }
 .tab1{
-  border-collapse:collapse ;
-  border: 1px solid black;
+border-collapse:collapse ;
+word-wrap: break-word;
+border: 1px solid black;
 }
+.tab11{
+border-collapse:collapse ;
+border: 1px solid black;
+background-color:  rgb(205, 223, 236);
+word-wrap: break-word;
+}
+
 .tab2{
-  border-collapse:collapse ;
-  border: 1px solid black;
-  background-color:rgb(154, 197, 233) ;
-  width: 100%;
-  color:rgb(255, 255, 255);
-  font-size: 20px
+border-collapse:collapse ;
+border: 1px solid black;
+background-color:rgb(138, 176, 214) ;
+width: 100%;
+color:rgb(255, 255, 255);
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+word-wrap: break-word;
 }
 .tab21{
-  border-collapse:collapse ;
-  border: 1px solid black;
-  background-color: rgb(205, 223, 236);
-  
+border-collapse:collapse ;
+border: 1px solid black;
+background-color: rgb(205, 223, 236);
+color:rgb(0, 0, 0);
+
+word-wrap: break-word;
 }
+.tab22{
+border-collapse:collapse ;
+border: 1px solid black;
+color:rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+height: auto;
+
+word-wrap: break-word;
+}
+.tab31
+{
+border-collapse:collapse ;
+border: 1px solid black;
+background-color: rgb(205, 223, 236);
+color:rgb(0, 0, 0);
+text-align: center;
+word-wrap: break-word;
+}
+
 .thfirst{
 width:  300px;
 }
 .thfirst1{
-  margin-left: 10%;
-  width:  250px;
+margin-left: 10%;
+width:  250px;
 }
 .background{
-  background-color: rgb(205, 223, 236);
-  
+background-color: rgb(205, 223, 236);
+
 }
-.textarea{
-  resize:horizontal;
-  font-size: 18px;
-  border: 0px;
-  display: block;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  width: 100%;
+
+.textarea1{
+width: 100%;
+font-size: 18px;
+border: 0px;
+display: block;
+box-sizing: border-box;
+word-wrap: break-word;
+
+resize: none;
 }
 .text2page{
+
+font-size: 21px;
+margin-left: 35px;
+}
+
+textarea {
+width: 100%;
+
+font-size: 16px;
+border: 0;
+display: block;
+resize: none;
+min-height: 50px;
+}
+
+.textarea2{
+  width: 99%;
+  background-color: rgb(205, 223, 236);
+  font-size: 18px;
+  border: 100px;
+ 
   
-  font-size: 21px;
-  margin-left: 35px;
+  max-height: auto;
+}
+
+.iputt{
+  word-wrap:break-word;
 }

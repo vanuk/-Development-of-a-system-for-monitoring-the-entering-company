@@ -10,110 +10,23 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <script scr="pdf.css"></script>
+    <link href="pdf.css" rel="stylesheet" type="text/css">
 
 
-
-   <style>
-
-.title{
-    font-size: x-large;
-    margin: 0px 0px -1px;
-    font-style:calc(black);
-   
-    text-align: center;    
-}
-.block1{
-    font-size: x-large;
-    margin-left: 60%;
-    font-style: unset;
-}
-.tablefirst{
-   text-align: center;
-    font-size: 20px;
-    margin-left:8%;
-    
-   
-}
-.tab1{
-  border-collapse:collapse ;
-  border: 1px solid black;
-}
-.tab11{
-  border-collapse:collapse ;
-  border: 1px solid black;
-  background-color:  rgb(205, 223, 236);
-}
-
-.tab2{
-  border-collapse:collapse ;
-  border: 1px solid black;
-  background-color:rgb(138, 176, 214) ;
-  width: 100%;
-  color:rgb(255, 255, 255);
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  
-}
-.tab21{
-  border-collapse:collapse ;
-  border: 1px solid black;
-  background-color: rgb(205, 223, 236);
-  color:rgb(0, 0, 0);
-}
-.tab22{
-  border-collapse:collapse ;
-  border: 1px solid black;
-  color:rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  height: auto;
-}
-.tab31
-{
-  border-collapse:collapse ;
-  border: 1px solid black;
-  background-color: rgb(205, 223, 236);
-  color:rgb(0, 0, 0);
-  text-align: center;
-}
-
-.thfirst{
-width:  300px;
-}
-.thfirst1{
-  margin-left: 10%;
-  width:  250px;
-}
-.background{
-  background-color: rgb(205, 223, 236);
-  
-}
-
-.textarea{
-  resize: none;
-  font-size: 18px;
-  border: 0px;
-  display: block;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  width: 100%;
-}
-.text2page{
-  
-  font-size: 21px;
-  margin-left: 35px;
-}
- 
-   </style>
-   
 
 </head>
 <body>
 
+
   <button class="btn btn-primary" id="download"> download pdf</button>
+  <input type="checkbox" id="a4" name="format" value="a4" checked>
+    <label for="a4">A4</label>
+    <input type="checkbox" id="b5" name="format" value="b5">
+    <label for="b5">B5</label>
     
     <div class="card" id="invoice">
        
-      <div id="page1">
+      <div id="page1" class="page1">
       <p class="title">Національний університет водного господарства та <br>природокористування</p>
       <p class="title" >Навчально-науковий інститут будівництва та архітектури</p>    
            
@@ -122,7 +35,7 @@ width:  300px;
           <p>Голова науково-методичної <br> ради НУВГП<br> <i>е-підпис</i> О. ЛАГОДНЮК<br><br>26.10.2021 </p>
         </div>
 
-          <h2 style="margin-left: 590px;" ><br><b>03-04-015s</b> <br><br></h2>
+          <h2 style="margin-left: 60%;" class="num" ><br><b>03-04-015s</b> <br><br></h2>
             
 
 
@@ -178,15 +91,13 @@ width:  300px;
            
           </div>
 
-        
           <h4 style="text-align: center;"><br><br><br>РІВНЕ - 2023</h4>
 
-          <h6 style="text-align: end;"> 0<br> </h6>
+          <h6 style="text-align: end;"> 0<br><br> </h6>
       </div>
-
       <div id="page2">
           <h3 style="text-align: right" ><i>Друга стрінка силабусу</i></h3>
-          <p class="text2page" >Силабус навчальної дисципліни <b>«Планування та благоустрій міст»</b>
+          <p class="text2page" >Силабус навчальної дисципліни <b><input   class="inputt" placeholder="yfpdf rjj"/></b>
           <br>для здобувачів вищої освіти ступеня «бакалавр», які навчаються за
           <br>освітньо-професійною програмою <b>Будівництво та цивільна інженерія</b>
           <br>спеціальності <b>192 «Будівництво та цивільна інженерія». </b>Рівне.
@@ -210,11 +121,10 @@ width:  300px;
           <br><br>СЗ №-5674 в ЕДО.<br><br><br><br><br>
           </p>
            
-          <p style="text-align: right;"> Шевчук О.В., 2021<br> Ярута Я.В., 2021<br> НУВГП, 2021<br><br><br><br><br>1<br><br></p>
+          <p style="text-align: right;"> Шевчук О.В., 2021<br> Ярута Я.В., 2021<br> НУВГП, 2021<br><br><br>1<br><br></p>
           
       </div>
-
-      <div id="page3">
+      <div id="page3" class="page3">
           <table class="tab2"  >
 
             <thead>
@@ -227,62 +137,62 @@ width:  300px;
 
               <tr>
                 <td  class="tab21">Ступінь вищої освіти </td>
-                <td class="tab21">вказується ступінь: бакалавр або магістр</td>
+                <td class="tab21"><input class="textarea1"  placeholder="вказується ступінь: бакалавр або магістр" style="background:  rgb(205, 223, 236);"/></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Освітня програма </td>
-                <td class="tab22">назва ОП</td>
+                <td class="tab22"><textarea class="textarea1" id="myTextArea" placeholder="назва ОП"></textarea></td>
               </tr>
 
               <tr>
                 <td  class="tab21">Спеціальність </td>
-                <td class="tab21">вказується № та назва спеціальності</td>
+                <td class="tab21"><textarea class="textarea1" id="myTextArea" placeholder="вказується № та назва спеціальності"style="background:  rgb(205, 223, 236);"></textarea></td>
               </tr>
 
               <tr>
-                <td  class="tab22">Рік навчання, семестр </td>
-                <td  class="tab22"></td>
+                <td  class="tab22"></textarea>Рік навчання, семестр </td>
+                <td  class="tab22"><textarea class="textarea1" id="myTextArea"></textarea></td>
               </tr>
 
               <tr>
-                <td  class="tab21">Кількість кредитів </td>
-                <td class="tab21"></td>
+                <td  class="tab21"> Кількість кредитів</td>
+                <td class="tab21"><input class="textarea1"style="background:  rgb(205, 223, 236);"  /></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Лекції: </td>
-                <td class="tab22">вказується кількість годин</td>
+                <td class="tab22"><input class="textarea1"  placeholder="вказується кількість годин"/></td>
               </tr>
 
               <tr>
                 <td  class="tab21">Лабораторні заняття: </td>
-                <td class="tab21">вказується кількість годин</td>
+                <td class="tab21"><input class="textarea1" style="background:  rgb(205, 223, 236);" placeholder="вказується кількість годин"/></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Самостійна робота: </td>
-                <td class="tab22">вказується кількість годин</td>
+                <td class="tab22"><input class="textarea1"  placeholder="вказується кількість годин"/></td>
               </tr>
 
               <tr>
                 <td  class="tab21">Курсова робота: </td>
-                <td class="tab21">так/ні</td>
+                <td class="tab21"><input class="textarea1" style="background:  rgb(205, 223, 236);" placeholder="так/ні"/></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Форма навчання </td>
-                <td class="tab22">денна/заочна</td>
+                <td class="tab22"><input class="textarea1"  placeholder="денна/заочна"/></td>
               </tr>
 
               <tr>
                 <td  class="tab21">Форма підсумкового контролю </td>
-                <td class="tab21">залік/екзамен</td>
+                <td class="tab21"><input class="textarea1" style="background:  rgb(205, 223, 236);" placeholder="залік/екзамен"/></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Мова викладання</td>
-                <td class="tab22"></td>
+                <td class="tab22"><input class="textarea1"  placeholder="мова викладання"/></td>
               </tr>
            
               <tr>
@@ -291,42 +201,42 @@ width:  300px;
 
               <tr>
                 <td  class="tab21">Лектор<br><img src="images.jpeg", height="150px" ></td>
-                <td  class="tab21">вказуються конкретні дані: ПІБ, вчене звання, науковий ступінь, посада.</td>
+                <td  class="tab21"><textarea class="textarea1"style="background:  rgb(205, 223, 236);" id="myTextArea" placeholder="вказуються конкретні дані: ПІБ, вчене звання, науковий ступінь, посада."></textarea></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Вікіситет</td>
-                <td class="tab22">вказується URL:https://______</td>
+                <td class="tab22"><textarea class="textarea1" id="myTextArea" placeholder="вказується URL:https://______"></textarea></td>
               </tr>
 
               <tr>
                 <td  class="tab21">ORCID</td>
-                <td class="tab21">вказується UR::https://______</td>
+                <td class="tab21"><textarea class="textarea1"style="background:  rgb(205, 223, 236);" id="myTextArea" placeholder="вказується URL:https://______"></textarea></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Як комунікувати</td>
-                <td class="tab22">вказуються можливі способи комунікації здобувача з викладачем</td>
+                <td class="tab22"><textarea class="textarea1" id="myTextArea" placeholder="вказуються можливі способи комунікації здобувача з викладачем"></textarea></td>
               </tr>
-
+            
               <tr>
                 <td  class="tab21">Лектор<br><img src="images.jpeg", height="150px" ></td>
-                <td  class="tab21">вказуються конкретні дані: ПІБ, вчене звання, науковий ступінь, посада.</td>
+                <td  class="tab21"><textarea class="textarea1" style="background:  rgb(205, 223, 236);" id="myTextArea" placeholder="вказуються конкретні дані: ПІБ, вчене звання, науковий ступінь, посада."></textarea></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Вікіситет</td>
-                <td class="tab22">вказується URL:https://______</td>
+                <td class="tab22"><textarea class="textarea1" id="myTextArea" placeholder="вказується URL:https://______"></textarea></td></td>
               </tr>
 
               <tr>
                 <td  class="tab21">ORCID</td>
-                <td class="tab21">вказується UR::https://______</td>
+                <td class="tab21"><textarea class="textarea1"style="background:  rgb(205, 223, 236);" id="myTextArea" placeholder="вказується URL:https://______"></textarea></td></td>
               </tr>
 
               <tr>
                 <td  class="tab22">Як комунікувати</td>
-                <td class="tab22">вказуються можливі способи комунікації здобувача з викладачем</td>
+                <td class="tab22"><textarea class="textarea1" id="myTextArea" placeholder="вказуються можливі способи комунікації здобувача з викладачем"></textarea></td>
               </tr>
               </tbody>
               
@@ -343,7 +253,7 @@ width:  300px;
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">актуальність освітньої компоненти, чому важлива та цікава? Мета та цілі освітньої компоненти (до 500 др. знаків з пробілами) </td>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="актуальність освітньої компоненти, чому важлива та цікава? Мета та цілі освітньої компоненти (до 500 др. знаків з пробілами)" ></textarea></td>
             </tr>
 
             <tr>
@@ -351,7 +261,7 @@ width:  300px;
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">зазначається link </td>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="зазначається link"></textarea> </td>
             </tr>
 
             <tr>
@@ -359,52 +269,52 @@ width:  300px;
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">наводяться визначені освітньою програмою компетентності, для формування яких використовується ця освітня компонента </td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="наводяться визначені освітньою програмою компетентності, для формування яких використовується ця освітня компонента </td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Програмні результати навчання (ПРН). Результати навчання (РН) </td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">наводяться визначені освітньою програмою ПРН (РП – для вибіркових освітніх компонентів), для формування яких використовується ця освітня компонента  </td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="наводяться визначені освітньою програмою ПРН (РП – для вибіркових освітніх компонентів), для формування яких використовується ця освітня компонента  </td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Структура та зміст освітнього компонента</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">теми, деталізовані ПРН/РН, завдання, форми проведення занять, види навчальної роботи студента, методи та технології навчання,  засоби навчання, перелік навчальних матеріалів, які повинен опанувати/ознайомитись студент перед  заняттям та інше </td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="теми, деталізовані ПРН/РН, завдання, форми проведення занять, види навчальної роботи студента, методи та технології навчання,  засоби навчання, перелік навчальних матеріалів, які повинен опанувати/ознайомитись студент перед  заняттям та інше </td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Перелік соціальних, «м’яких» навичок (soft skills)</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">перелік соціальних навичок (т.з. soft skills), що формує ця освітня компонента </td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="перелік соціальних навичок (т.з. soft skills), що формує ця освітня компонента </td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Форми та методи навчання</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">форми і методи навчання та викладання, що сприяють досягненню заявлених у силабусі ПРН (РН) та відповідають вимогам студентоцентрованого підходу і принципам академічної свободи </td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="форми і методи навчання та викладання, що сприяють досягненню заявлених у силабусі ПРН (РН) та відповідають вимогам студентоцентрованого підходу і принципам академічної свободи </td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Порядок та критерії оцінювання</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">	форми та зміст контрольних заходів;
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="	форми та зміст контрольних заходів;
                 	перелік критеріїв оцінювання, їх бальні значення;
                 	види навчальних завдань для отримання обов’язкових та додаткових балів (бонусів) поточної (практичної) складової оцінки здобувача;
                 	як проходитиме модульний та підсумковий контроль знань (кількість питань у тексті, їх вага);
                 	характеристика різнорівневих видів завдань, у тому числі самоконтроль;
-                	як розраховується загальна інтегральна оцінка та інше…
+                	як розраховується загальна інтегральна оцінка та інше…"></textarea>
               </td>
             </tr>
 
@@ -413,8 +323,8 @@ width:  300px;
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">–	як здобувачі вищої освіти залучені до реалізації наукових індивідуальних тем досліджень;
-                –	які конкретно наукові досягнення, індивідуальні та колективні, використовуються викладачем під час навчання
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="–	як здобувачі вищої освіти залучені до реалізації наукових індивідуальних тем досліджень;
+                –	які конкретно наукові досягнення, індивідуальні та колективні, використовуються викладачем під час навчання"></textarea>
               </td>
             </tr>
 
@@ -423,42 +333,42 @@ width:  300px;
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">вписується основна та додаткова література, наявна у цифровому репозиторії НУВГП, наводяться способи доступності ресурсів: лінки на ресурс, YouTube, відеозаняття, слайдкурс, конспекти лекцій, інші рекомендовані ресурси</td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="вписується основна та додаткова література, наявна у цифровому репозиторії НУВГП, наводяться способи доступності ресурсів: лінки на ресурс, YouTube, відеозаняття, слайдкурс, конспекти лекцій, інші рекомендовані ресурси</td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Дедлайни та перескладання</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">дедлайни на здачу (захист) частин освітньої компоненти, які оцінюються (лабораторні, практичні, відповідно до політики оцінювання)</td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="дедлайни на здачу (захист) частин освітньої компоненти, які оцінюються (лабораторні, практичні, відповідно до політики оцінювання)</td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Неформальна та інформальна освіта</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">розміщуються відкриті онлайн-курси таких платформ, як Prometheus, Coursera, edEx, edEra, FutureLearn тощо. При цьому важливо, щоб знання та навички, що формуються під час проходження певного онлайн-курсу чи його частин, мали зв'язок з очікуваними навчальними результатами цієї освітньої компоненти/освітньої програми та перевірялись в підсумковому оцінюванні</td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="розміщуються відкриті онлайн-курси таких платформ, як Prometheus, Coursera, edEx, edEra, FutureLearn тощо. При цьому важливо, щоб знання та навички, що формуються під час проходження певного онлайн-курсу чи його частин, мали зв'язок з очікуваними навчальними результатами цієї освітньої компоненти/освітньої програми та перевірялись в підсумковому оцінюванні</td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Практики, представники бізнесу, фахівці, залучені до викладання</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">зазначається інформація про залучення до навчання та викладання практиків, представників успішного бізнесу (їх посади, місця роботи, отримувані компетентності та ін. )</td>
-            </tr>
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="зазначається інформація про залучення до навчання та викладання практиків, представників успішного бізнесу (їх посади, місця роботи, отримувані компетентності та ін. )</td>
+            "></textarea></tr>
 
             <tr>
               <td class="tab31", colspan="100%">Правила академічної доброчесності</td>
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">наводиться інформація стосовно:
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="наводиться інформація стосовно:
                 	перевірки  навчальних завдань на плагіат (есе, реферати); 
                 	поведінка в аудиторії, недопущення списування та обману;
-                	санкції за порушення норм доброчесності під час вивчення освітньої компоненти
+                	санкції за порушення норм доброчесності під час вивчення освітньої компоненти"></textarea>
               </td>
             </tr>
 
@@ -467,10 +377,10 @@ width:  300px;
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">	як можна відпрацювати пропущені заняття (лікарняні, мобільність і т. ін.);
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="	як можна відпрацювати пропущені заняття (лікарняні, мобільність і т. ін.);
                 	як можна отримати індивідуальні завдання;
                 	можливість здобувачам переглядати відеолекції при об'єктивних причинах пропуску занять;
-                	можливість здобувачам на заняттях використовувати мобільні телефони та ноутбуки
+                	можливість здобувачам на заняттях використовувати мобільні телефони та ноутбуки"></textarea>
                 </td>
             </tr>
 
@@ -479,10 +389,10 @@ width:  300px;
             </tr>
 
             <tr>
-              <td class="tab22", colspan="100%">	яким чином викладач оновлює зміст цієї освітньої компоненти на основі наукових досягнень і сучасних практик у відповідній галузі;
+              <td class="tab22", colspan="100%"><textarea class="textarea1" id="myTextArea" placeholder="	яким чином викладач оновлює зміст цієї освітньої компоненти на основі наукових досягнень і сучасних практик у відповідній галузі;
                 	чи відбулися зміни в освітньому компоненті та чим вони вмотивовані;
                 	хто виступив ініціатором оновлень;
-                	як можуть здобувачі вищої освіти долучитись до процедури оновлення освітньої компоненти
+                	як можуть здобувачі вищої освіти долучитись до процедури оновлення освітньої компоненти"></textarea>
                 </td>
             </tr>
 
@@ -491,7 +401,7 @@ width:  300px;
             </tr>
             
             <tr>
-              <td class="tab22", colspan="100%"> <textarea class="textarea" id="myTextArea" placeholder="	процедура визнання результатів навчання, отриманих в інших закладах освіти, зокрема під час академічної мобільності;
+              <td class="tab22", colspan="100%"> <textarea class="textarea1" id="myTextArea" placeholder="	процедура визнання результатів навчання, отриманих в інших закладах освіти, зокрема під час академічної мобільності;
                 	до яких міжнародних інформаційних ресурсів та баз даних отримають доступ здобувачі освіти;
                 	у яких чинних міжнародних проектах ЗВО та інших організацій можуть брати участь здобувачі та інше…
                 ", style="height: 200px;" ></textarea></td>
@@ -500,38 +410,51 @@ width:  300px;
         </table>
 
         <br><br>Лектор     ПІБ, науковий ступінь, вчене звання<br>
+
+        <input type="file" id="imageInput">
+        <img id="imagePreview">
       </div> 
       
-          <textarea class="textarea" placeholder="dadaadsdas"  id="myTextArea" ></textarea>
+          <textarea class="textarea1"   id="myTextArea1" ></textarea>
 
           <script>
-            // Отримуємо посилання на елемент textarea
-            const textArea = document.getElementById("myTextArea");
-      
-            // Функція для зміни висоти textarea
-            function autoResize() {
-              this.style.height = "auto";
-              this.style.height = this.scrollHeight + "px";
-            }
-      
-            // Додаємо обробник події "input" для textarea
-            textArea.addEventListener("input", autoResize);
+            const textareas = document.querySelectorAll('textarea');
+
+            textareas.forEach(textarea => {
+              textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+              });
+            });
           </script>
           
-          <input class="textarea" id="myInput" type="text" placeholder="Введите что-нибудь..."  />
-          <script>
-            function autoResize() {
-              var input = document.getElementById("myInput");
-              input.style.width = ((input.value.length + 1) * 9) + "px";
-            }
-            </script>
-          <script src="input.js"></script>    
+      </div>
 
-    </div>
-
-
+    
               
-</body>
+      <script>
+        const imageInput = document.getElementById("imageInput");
+const imagePreview = document.getElementById("imagePreview");
+
+imageInput.addEventListener("change", function () {
+  const file = this.files[0];
+
+  // Перевірка чи файл є зображенням
+  if (!file.type.startsWith("image/")) {
+    console.log("Оберіть файл зображення.");
+    return;
+  }
+
+  // Читання файлу та відображення зображення
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = function () {
+    imagePreview.src = reader.result;
+  };
+});
+
+      </script>
+    </body>
 
 </html>
 <style>
