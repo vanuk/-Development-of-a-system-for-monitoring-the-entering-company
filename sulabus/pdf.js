@@ -7,7 +7,7 @@ window.onload = function () {
         const a4Checkbox = document.getElementById("a4");
         const b5Checkbox = document.getElementById("b5");
         let format = a4Checkbox.checked ? "a4" : "b5";
-
+        let format1=b5Checkbox.checked? "a4":"b5";
         var opt = {
             margin: 0.5,
             filename: 'myfile.',
@@ -21,10 +21,23 @@ window.onload = function () {
                 orientation: 'portrait'
             }
         };
+        var opt = {
+            margin: 0.5,
+            filename: 'myfile.',
+            image: { type: 'jpeg', quality: 5 },
+            html2canvas: {
+                scale: format1 === "a4" ? 5 : 5
+            },
+            jsPDF: {
+                unit: 'in',
+                format: format1 === "a4" ? 'b5' : 'a4',
+                orientation: 'portrait'
+            }
+        };
 
         if (format === "b5") {
+
             const elements = document.querySelectorAll('.title');
-            
             elements.forEach((element) => {
                 element.style.fontSize = "large";
             });
@@ -38,12 +51,13 @@ window.onload = function () {
             
             tab1.forEach((element) => {
                 element.style.fontSize = "18px";
+
             });
 
             const tab11 = document.querySelectorAll('.num');
             
             tab11.forEach((element) => {
-                element.style.fontSize = "18px";
+                element.style.fontSize = "20px";
             });
 
             const page2= document.querySelectorAll('.text2page');
@@ -76,7 +90,7 @@ window.onload = function () {
             element.style.fontSize = "16px";
             });
         }
-        if (format === "a5")
+        else if (format === "a4")
         {
             const elements = document.querySelectorAll('.title');
             
@@ -87,19 +101,19 @@ window.onload = function () {
             const block1Elements = document.querySelectorAll('.block1');
                 block1Elements.forEach((element) => {
                     element.style.fontSize = "x-large";
-                    element.style.fontSize = "70 %" ;
+                   // element.style.margin-left ==;
             });
 
             const tab1 = document.querySelectorAll('.tab1');
             
             tab1.forEach((element) => {
-                element.style.fontSize = "18px"+"5px";
+                element.style.fontSize = "18px"+"10px";
             });
 
             const tab11 = document.querySelectorAll('.num');
             
             tab11.forEach((element) => {
-                element.style.fontSize = "18px"+"5px";
+                element.style.fontSize = "25px";
             });
 
             const page2= document.querySelectorAll('.text2page');
